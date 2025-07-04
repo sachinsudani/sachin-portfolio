@@ -8,9 +8,10 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { useTheme } from "../context/ThemeContext";
 
 const Navbar = () => {
-  const theme = "dark"; // TODO: Get theme from context
+  const { theme, toggleTheme } = useTheme();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const pathName = usePathname();
   const toggleMobileMenu = () => {
@@ -26,16 +27,16 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed w-full bg-dark/80 backdrop-blur-sm z-50">
+    <nav className="fixed w-full bg-white/80 dark:bg-dark/80 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-700">
       <div className="container max-w-7xl mx-auto px-4">
         {/* Desktop Menu */}
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="text-xl font-bold text-primary">
-            Sachin Sudani&trade;
+            Sachin Sudani
           </Link>
 
           {/* Desktop Menu Items */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {menuItems.map((item) => {
               const isActive = pathName === item.href;
               return (
@@ -43,7 +44,7 @@ const Navbar = () => {
                   key={item.href}
                   href={item.href}
                   className={`hover:text-primary transition-colors font-medium items-center gap-2 flex ${
-                    isActive ? "text-primary" : ""
+                    isActive ? "text-primary" : " "
                   }`}
                 >
                   {item.label}
@@ -51,7 +52,10 @@ const Navbar = () => {
               );
             })}
 
-            <button className="p-2 rounded-lg hover:bg-gray-100 text-white hover:text-primary dark:hover:bg-gray-800 transition-colors cursor-pointer">
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg hover:bg-gray-100 text-white hover:text-primary dark:hover:bg-gray-800 transition-colors cursor-pointer"
+            >
               {theme === "dark" ? (
                 <SunIcon className="w-5 h-5" />
               ) : (
@@ -62,12 +66,12 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMobileMenu}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 text-primary dark:hover:bg-gray-800 transition-colors cursor-pointer"
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
           >
             {isMobileMenuOpen ? (
-              <XMarkIcon className="w-5 h-5" />
+              <XMarkIcon className="w-6 h-6" />
             ) : (
-              <Bars3Icon className="w-5 h-5" />
+              <Bars3Icon className="w-6 h-6" />
             )}
           </button>
         </div>
@@ -88,7 +92,10 @@ const Navbar = () => {
             ))}
 
             <div>
-              <button className="flex items-center py-2 hover:text-primary transition-colors">
+              <button
+                onClick={toggleTheme}
+                className="flex items-center py-2 hover:text-primary transition-colors"
+              >
                 {theme === "dark" ? (
                   <>
                     <SunIcon className="w-5 h-5 mr-2" /> Light Mode
