@@ -44,7 +44,7 @@ const Navbar = () => {
                   key={item.href}
                   href={item.href}
                   className={`hover:text-primary transition-colors font-medium items-center gap-2 flex ${
-                    isActive ? "text-primary" : " "
+                    isActive ? "text-primary" : ""
                   }`}
                 >
                   {item.label}
@@ -54,7 +54,7 @@ const Navbar = () => {
 
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg hover:bg-gray-100 text-white hover:text-primary dark:hover:bg-gray-800 transition-colors cursor-pointer"
+              className="p-2 rounded-lg hover:bg-gray-100 dark:text-white hover:text-primary dark:hover:bg-gray-800 transition-colors cursor-pointer"
             >
               {theme === "dark" ? (
                 <SunIcon className="w-5 h-5" />
