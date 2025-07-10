@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Hero = () => {
   return (
@@ -39,10 +40,10 @@ const Hero = () => {
             <FaLinkedin />
           </Link>
           <Link
-            href="https://twitter.com/sachinsudani"
+            href="https://x.com/sachinsudani"
             className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 transition-colors duration-300"
           >
-            <FaTwitter />
+            <FaXTwitter />
           </Link>
         </div>
 

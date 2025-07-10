@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ReactNode } from "react";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { ThemeProvider } from "./context/ThemeContext";
 import "./globals.css";
@@ -33,7 +34,7 @@ export default function RootLayout({
         <ThemeProvider>
           <Navbar />
           <main className="min-h-screen pt-24"> {children} </main>
-          <footer> Footer </footer>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
