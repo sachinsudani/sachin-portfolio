@@ -5,11 +5,11 @@ import Projects from "./components/Projects";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Hero />
       <Projects />
-      <Blogs />
-      <Newsletter />
-    </>
+      {/* <Blogs /> */}
+      {/* <Newsletter /> */}
+    </main>
   );
 }
