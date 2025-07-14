@@ -111,14 +111,20 @@ export default function About() {
             <p className="text-primary mb-2">Xenett • 2024 - Present</p>
             <ul className="text-secondary space-y-2 list-disc list-inside">
               <li>
-                Led the development of new technologies and frameworks to
-                improve productivity and efficiency
+                Led the adoption of TypeScript across the backend codebase,
+                introducing full type safety, and mentoring 3 developers in
+                clean code, OOP, and dependency injection.
               </li>
               <li>
-                Implemented automated deployment strategies reducing deployment
-                time by 50%
+                Architected and delivered modular, event-driven APIs with
+                optimized MongoDB schema design, middleware layering, and
+                Zod-based validation.
               </li>
-              <li>Mentored junior developers and conducted code reviews</li>
+              <li>
+                Actively reviewed all PRs, ensuring code quality, scalability,
+                and maintainability, and was recognized as a top backend
+                contributor.
+              </li>
             </ul>
           </motion.div>
 
@@ -133,13 +139,17 @@ export default function About() {
             <p className="text-primary mb-2">BKSoftech • 2022 - 2024</p>
             <ul className="text-secondary space-y-2 list-disc list-inside">
               <li>
-                Developed and maintained backend services using Node.js and
-                Express
+                Built real-world backend services with a focus on modular
+                architecture, database relationships, and performance tuning.
               </li>
-              <li>Led development of business and reputed people features</li>
               <li>
-                Implemented dynamic business feed for users with real-time
-                updates
+                Contributed to production features in live projects, applying
+                industry best practices in REST API design and data flow
+                management.
+              </li>
+              <li>
+                Led the development of features for businesses and reputed
+                individuals, and implemented a dynamic business feed for users.
               </li>
             </ul>
           </motion.div>

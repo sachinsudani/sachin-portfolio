@@ -31,7 +31,7 @@ export default function Navbar() {
       <div className="container max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="text-xl font-bold text-primary">
-            Sachin Sudani&trade;
+            Sachin Sudani
           </Link>
 
           {/* Desktop Menu */}
