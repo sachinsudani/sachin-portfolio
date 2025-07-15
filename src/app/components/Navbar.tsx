@@ -1,14 +1,15 @@
 "use client";
-import Link from "next/link";
+
 import {
-  SunIcon,
-  MoonIcon,
   Bars3Icon,
+  MoonIcon,
+  SunIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import { useTheme } from "../context/ThemeContext";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 import { useState } from "react";
+import { useTheme } from "../context/ThemeContext";
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
